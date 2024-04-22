@@ -1,0 +1,45 @@
+.body {
+    background: black;
+    font-family: monospace;
+}
+
+.banner {
+    background-color: black;
+    color:antiquewhite;
+}
+
+.row {
+    align-items: center;
+}
+
+.btn {
+    padding: .5em 1.5em;
+    border-radius: 2em;
+}
+
+.p {
+    font-size: 1.5em;
+}
+
+.chubby-sugar {
+    color:blueviolet;
+}
+
+.chubby-sugar:hover {
+    color:cadetblue;
+}
+
+#learn-more:hover {
+    color:blueviolet;
+    text-decoration: underline;
+}
+
+.links {
+    display: flex;
+    gap: 14px;
+}
+  
+.fa-brands:hover {
+    color:blueviolet;
+    cursor: pointer;
+}
