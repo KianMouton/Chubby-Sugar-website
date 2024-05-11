@@ -1,0 +1,186 @@
+* {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-right: 20px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-bottom: 4px solid black;
+    position: fixed;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.page-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 50px;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    width: 50%;
+    transition: 0.3s ease;
+}
+
+.nav-link {
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: rgb(131, 38, 177);
+    text-decoration: none;
+    scale: 1.1;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 50%;
+    transition: 0.3s ease;
+}
+
+
+.link {
+    transition: 0.3s ease;
+}
+
+.link:hover {
+    color: rgb(131, 38, 177);
+    text-decoration: none;
+    scale: 1.2;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(
+        to right,
+        rgb(131, 38, 177),
+        rgb(0, 0, 0) 50%
+    )
+}
+
+.about-text {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+@media (min-width: 100px) {
+    .about-text {
+        margin-left: 200px;
+    }
+}
+
+.chubby-sugar {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+
+.description {
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+
+.img-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo {
+    height: 100vh;
+}
+
+.Printing {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    border-top: 2px solid purple;
+    padding-top: 100px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 50vw;
+    color: white;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 50px;
+    color: white;
+}
+
+.container-image {
+    margin: 30px;
+    width: 40vw;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.Engraving {
+    background-color: black;
+    display: flex;
+    padding-top: 100px;
+}
+
+.d-printing {
+    background-color: black;
+    display: flex;
+    padding-top: 100px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 300px;
+}
+
+.email {
+    margin: 50px;
+    text-align: center;
+}
+
+.btn {
+    text-align: center;
+    margin: 25px auto;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
