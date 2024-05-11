@@ -2,6 +2,7 @@
     font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .navbar {
@@ -17,6 +18,7 @@
     position: fixed;
     width: 100vw;
     box-sizing: border-box;
+    z-index: 99;
 }
 
 .page-links {
@@ -77,6 +79,7 @@ a {
     )
 }
 
+
 .about-text {
     margin-left: 20px;
     margin-right: 20px;
@@ -108,7 +111,50 @@ a {
 
 .img-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 50%;
+}
+
+.slider {
+    padding: 5px;
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.75;
+    transition: opacity 0.25s ease;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
 }
 
 .logo {
@@ -176,11 +222,24 @@ a {
 }
 
 .btn {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     margin: 25px auto;
     background-color: black;
     color: white;
     padding: 10px;
     border: 2px solid white;
     border-radius: 10px;
+    transition: 0.4s ease;
+}
+
+.btn:hover {
+    border: 2px solid purple;
+}
+
+@media (max-width: 480px) {
+    .about {
+        background: black;
+        display: block;
+    }
 }
