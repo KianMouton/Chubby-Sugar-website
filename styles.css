@@ -71,12 +71,26 @@ a {
 
 .about {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    align-items: center;
     background: linear-gradient(
         to right,
         rgb(131, 38, 177),
         rgb(0, 0, 0) 50%
     )
+}
+
+@media (max-width: 480px) {
+    * {
+        font-size: 12px;
+    }
+    .about {
+        padding-top: 100px;
+    }
+    .Printing, .Engraving, .d-printing {
+        flex-direction: column;
+        padding-top: 0px;
+    }
 }
 
 
@@ -86,14 +100,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-   
-}
-
-@media (min-width: 100px) {
-    .about-text {
-        margin-left: 200px;
-    }
+    left: 200px;
 }
 
 .chubby-sugar {
