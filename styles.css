@@ -14,7 +14,7 @@
     padding-right: 20px;
     background-color: rgb(255, 255, 255);
     color: black;
-    border-bottom: 4px solid black;
+    border-bottom: 3px solid black;
     position: fixed;
     width: 100vw;
     box-sizing: border-box;
@@ -84,15 +84,12 @@ a {
     * {
         font-size: 12px;
     }
+    
     .about {
         padding-top: 100px;
     }
-    .Printing, .Engraving, .d-printing {
-        flex-direction: column;
-        padding-top: 0px;
-    }
-}
 
+}
 
 .about-text {
     margin-left: 20px;
@@ -172,7 +169,12 @@ a {
     display: flex;
     flex-direction: row;
     background-color: black;
-    border-top: 2px solid purple;
+    background: linear-gradient(
+        to bottom,
+        purple,
+        black
+    );
+    border-top: 2px solid rgb(255, 0, 255);
     padding-top: 100px;
 }
 
@@ -248,5 +250,43 @@ a {
     .about {
         background: black;
         display: block;
+        background: linear-gradient(
+        to bottom,
+        rgb(28, 164, 255),
+        rgb(0, 0, 0) 25%
+    )
+    }
+
+    .Printing, .Engraving, .d-printing {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0px;
+    }
+
+    .Engraving {
+        flex-direction: column-reverse;
+    }
+
+    .about-text {
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    .chubby-sugar {
+        color:rgb(186, 65, 247)
+    }
+
+    .title {
+        border-bottom: 2px solid rgb(23, 154, 180);
+    }
+
+    .logo {
+        height: 70vh;
+    }
+
+    .container {
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
