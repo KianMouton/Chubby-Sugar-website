@@ -190,6 +190,7 @@ a {
 .container-image {
     margin: 30px;
     width: 40vw;
+    height: 300px;
     object-fit: cover;
     border: 2px solid white;
     border-radius: 10px;
@@ -266,6 +267,11 @@ a {
         rgb(28, 164, 255),
         rgb(0, 0, 0) 25%
     )
+    }
+
+    .container-image {
+        height: 150px;
+        width: 250px;
     }
 
     .Printing, .Engraving, .d-printing {
