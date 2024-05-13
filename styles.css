@@ -90,7 +90,7 @@ a {
 
 .about {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     background: linear-gradient(
         to right,
@@ -116,13 +116,20 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    left: 200px;
+    margin-left: 200px;
+}
+
+@media (max-width: 480px) {
+    .about-text {
+        margin-left: 0px;
+    }
 }
 
 .chubby-sugar {
     font-size: 50px;
     font-weight: 700;
     color: white;
+    text-align: center;
 }
 
 .description {
@@ -245,8 +252,10 @@ a {
 }
 
 .email {
+    font-size: 25px;
     margin: 50px;
     text-align: center;
+    border-bottom: 2px solid purple;
 }
 
 .btn {
@@ -263,6 +272,24 @@ a {
 
 .btn:hover {
     border: 2px solid purple;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-link {
+    margin: 10px;
+    text-align: center;
+    transition: 0.3s ease;
+    color: white;
+}
+
+.footer-link:hover {
+    color: rgb(131, 38, 177);
+    text-decoration: none;
+    scale: 1.2;
 }
 
 @media (max-width: 480px) {
@@ -315,5 +342,9 @@ a {
 
     .container-image {
         margin: 10px;
+    }
+
+    .page-links {
+        gap: 20px;
     }
 }
