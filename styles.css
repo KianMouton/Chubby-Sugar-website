@@ -5,6 +5,25 @@
     scroll-behavior: smooth;
 }
 
+.body {
+    width: 100vw;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    width: 60%;
+}
+
+.carousel-img {
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+
 .navbar {
     display: flex;
     flex-direction: row;
@@ -288,5 +307,13 @@ a {
     .container {
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .container-image {
+        margin: 10px;
     }
 }

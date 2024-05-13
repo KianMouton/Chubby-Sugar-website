@@ -37,34 +37,19 @@
         <h1 class="title">Printing</h1>
         <p class="printing-text">insert text hier wat beskryf wat jy print</p>
         </div>
-        <div class="slider-wrapper">
-            <div class="slider">
-                <img id="slide-1" class="container-image" src="static\images\printing-1.jpg">
-                <img id="slide-2" class="container-image" src="static\images\printing-2.jpg">
-                <img id="slide-3" class="container-image" src="static\images\printing-3.jpg">
-                <div class="slider-nav">
-                    <a href="#slide-1"></a>
-                    <a href="#slide-2"></a>
-                    <a href="#slide-3"></a>
-                </div> 
-            </div>
-                 
+        <div class="carousel">
+            <img class="container-image" src="static/images/printing-1.jpg">
+            <img class="container-image" src="static/images/printing-2.jpg">
+            <img class="container-image" src="static/images/printing-3.jpg">
         </div>
+                 
     </section>
     <section id="engraving" class="Engraving">
-        <div class="slider-wrapper">
-            <div class="slider">
-                <img id="slide-4" class="container-image" src="static\images\engraving-1.jpg">
-                <img id="slide-5" class="container-image" src="static\images\engraving-2.jpg">
-                <img id="slide-6" class="container-image" src="static\images\engraving-3.jpg">
-                <div class="slider-nav">
-                    <a href="#slide-4"></a>
-                    <a href="#slide-5"></a>
-                    <a href="#slide-6"></a>
-                </div>
-            </div>  
-            
-        </div>
+            <div class="carousel">
+                <img class="container-image" src="static/images/engraving-1.jpg">
+                <img class="container-image" src="static/images/engraving-2.jpg">
+                <img class="container-image" src="static/images/engraving-3.jpg">
+            </div> 
         <div class="container">
             <h1 class="title">Engraving</h1>
             <p class="engraving-text">insert text hier wat beskryf wat jy engrave</p>
@@ -75,17 +60,10 @@
         <h1 class="title">3d Printing</h1>
         <p class="d-printing-text">insert text hier wat beskryf wat jy 3d print</p>
         </div>
-        <div class="slider-wrapper">
-            <div class="slider">
-                <img id="slide-7" class="container-image" src="static\images\3d-printing-1.jpg">
-                <img id="slide-8" class="container-image" src="static\images\3d-printing-2.jpg">
-                <img id="slide-9" class="container-image" src="static\images\3d-printing-3.jpg">
-                <div class="slider-nav">
-                    <a href="#slide-7"></a>
-                    <a href="#slide-8"></a>
-                    <a href="#slide-9"></a>
-                </div>
-            </div>
+        <div class="carousel">
+            <img class="container-image" src="static/images/3d-printing-1.jpg">
+            <img class="container-image" src="static/images/3d-printing-2.jpg">
+            <img class="container-image" src="static/images/3d-printing-3.jpg">
         </div>
     </section>
     <section class="footer">
@@ -94,5 +72,64 @@
             <button class="btn">Send me an Email</button>
         </div>
     </section>
+    <script>
+       const carousels = document.querySelectorAll(".carousel");
+
+carousels.forEach(carousel => {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    carousel.addEventListener("mousedown", handleMouseDown);
+    carousel.addEventListener("touchstart", handleTouchStart);
+    carousel.addEventListener("mouseleave", handleMouseLeave);
+    carousel.addEventListener("touchend", handleTouchEnd);
+    carousel.addEventListener("mouseup", handleMouseUp);
+    carousel.addEventListener("touchmove", handleTouchMove);
+    carousel.addEventListener("mousemove", handleMouseMove);
+
+    function handleMouseDown(e) {
+        isDown = true;
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+    }
+
+    function handleTouchStart(e) {
+        const touch = e.touches[0];
+        isDown = true;
+        startX = touch.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+    }
+
+    function handleMouseLeave() {
+        isDown = false;
+    }
+
+    function handleTouchEnd() {
+        isDown = false;
+    }
+
+    function handleMouseUp() {
+        isDown = false;
+    }
+
+    function handleMouseMove(e) {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = x - startX;
+        carousel.scrollLeft = scrollLeft - walk;
+    }
+
+    function handleTouchMove(e) {
+        if (!isDown || e.touches.length > 1) return;
+        e.preventDefault();
+        const touch = e.touches[0];
+        const x = touch.pageX - carousel.offsetLeft;
+        const walk = x - startX;
+        carousel.scrollLeft = scrollLeft - walk;
+    }
+});
+    </script>
 </body>
 </html>
