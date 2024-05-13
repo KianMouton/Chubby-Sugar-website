@@ -47,9 +47,9 @@
     gap: 50px;
     align-items: center;
     background-color: rgb(255, 255, 255);
-    color: black;
     width: 50%;
     transition: 0.3s ease;
+    color: black;
 }
 
 .nav-link {
@@ -92,6 +92,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100vh;
     background: linear-gradient(
         to right,
         rgb(131, 38, 177),
@@ -130,6 +131,7 @@ a {
     font-weight: 700;
     color: white;
     text-align: center;
+    border-bottom: 2px solid rgb(12, 188, 232);
 }
 
 .description {
@@ -220,6 +222,7 @@ a {
     margin-bottom: 30px;
     font-size: 50px;
     color: white;
+    border-bottom: 2px solid rgb(23, 154, 180);
 }
 
 .container-image {
@@ -322,9 +325,6 @@ a {
     .chubby-sugar {
         color:rgb(186, 65, 247)
     }
-
-    .title {
-        border-bottom: 2px solid rgb(23, 154, 180);
     }
 
     .logo {
@@ -347,4 +347,3 @@ a {
     .page-links {
         gap: 20px;
     }
-}
