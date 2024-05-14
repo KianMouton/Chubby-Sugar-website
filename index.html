@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="If you are in Cape Town and need to get your priting,engraving,3D-printing and anything in between done,reach out to us and we will help you out">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -13,14 +14,14 @@
 <body>
     <section class="navbar">
         <div class="page-links">
-        <p class="nav-link"><a href="#about">About</a></p>
-        <p class="nav-link"><a href="#printing">Printing</a></p>
-        <p class="nav-link"><a href="#engraving">Engraving</a></p>
-        <p class="nav-link"><a href="#d-printing">3d-Printing</a></p>
+        <p class="nav-link"><a aria-label="Learn more about what we do and what we stand for" href="#about">About</a></p>
+        <p class="nav-link"><a aria-label="find out more about what we print" href="#printing">Printing</a></p>
+        <p class="nav-link"><a aria-label="find out more about what we engrave" href="#engraving">Engraving</a></p>
+        <p class="nav-link"><a aria-label="find our more about our 3D-printing" href="#d-printing">3d-Printing</a></p>
         </div>
         <div class="links">
-            <a href="https://www.facebook.com/profile.php?id=100078638864939"><i class="link fa-brands fa-xl fa-facebook"></i></a>
-            <a href="https://wa.me/0846090711"><i class="link fa-brands fa-xl fa-whatsapp"></i></a>
+            <a aria-label="check out our facebook" href="https://www.facebook.com/profile.php?id=100078638864939"><i class="link fa-brands fa-xl fa-facebook"></i></a>
+            <a aria-label="send us a message on whatsapp" href="https://wa.me/0846090711"><i class="link fa-brands fa-xl fa-whatsapp"></i></a>
         </div>
     </section>
     <section id="about" class="about">
@@ -29,7 +30,7 @@
             <p class="description">Have a great day on purpose</p>
         </div>
         <div class="img-container">
-            <img class="logo" src="static\images\chubby-sugar-logo.jpg" >
+            <img class="logo" src="static\images\chubby-sugar-logo.jpg" alt="Chubby Sugar logo" >
         </div>  
     </section>
     <section id="printing" class="Printing">
@@ -69,71 +70,71 @@
     <section class="footer">
         <div>
             <h1 class="email">Let's get in contact</h1>
-            <a href="mailto:  chubbysugarcpt@gmail.com"><button class="btn">Send me an Email</button></a>
+            <a aria-label="send me an email" href="mailto:  chubbysugarcpt@gmail.com"><button class="btn">Send me an Email</button></a>
         </div>
         <div class="footer-links">
-            <a href="https://www.facebook.com/profile.php?id=100078638864939"><i class="footer-link fa-brands fa-xl fa-facebook"></i></a>
-            <a href="https://wa.me/0846090711"><i class="footer-link fa-brands fa-xl fa-whatsapp"></i></a>
+            <a aria-label="check out our facebook" href="https://www.facebook.com/profile.php?id=100078638864939"><i class="footer-link fa-brands fa-xl fa-facebook"></i></a>
+            <a aria-label="send us a whatsapp" href="https://wa.me/0846090711"><i class="footer-link fa-brands fa-xl fa-whatsapp"></i></a>
         </div>
     </section>
     <script>
        const carousels = document.querySelectorAll(".carousel");
 
-carousels.forEach(carousel => {
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+        carousels.forEach(carousel => {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
 
-    carousel.addEventListener("mousedown", handleMouseDown);
-    carousel.addEventListener("touchstart", handleTouchStart);
-    carousel.addEventListener("mouseleave", handleMouseLeave);
-    carousel.addEventListener("touchend", handleTouchEnd);
-    carousel.addEventListener("mouseup", handleMouseUp);
-    carousel.addEventListener("touchmove", handleTouchMove);
-    carousel.addEventListener("mousemove", handleMouseMove);
+            carousel.addEventListener("mousedown", handleMouseDown);
+            carousel.addEventListener("touchstart", handleTouchStart);
+            carousel.addEventListener("mouseleave", handleMouseLeave);
+            carousel.addEventListener("touchend", handleTouchEnd);
+            carousel.addEventListener("mouseup", handleMouseUp);
+            carousel.addEventListener("touchmove", handleTouchMove);
+            carousel.addEventListener("mousemove", handleMouseMove);
 
-    function handleMouseDown(e) {
-        isDown = true;
-        startX = e.pageX - carousel.offsetLeft;
-        scrollLeft = carousel.scrollLeft;
-    }
+            function handleMouseDown(e) {
+                isDown = true;
+                startX = e.pageX - carousel.offsetLeft;
+                scrollLeft = carousel.scrollLeft;
+            }
 
-    function handleTouchStart(e) {
-        const touch = e.touches[0];
-        isDown = true;
-        startX = touch.pageX - carousel.offsetLeft;
-        scrollLeft = carousel.scrollLeft;
-    }
+            function handleTouchStart(e) {
+                const touch = e.touches[0];
+                isDown = true;
+                startX = touch.pageX - carousel.offsetLeft;
+                scrollLeft = carousel.scrollLeft;
+            }
 
-    function handleMouseLeave() {
-        isDown = false;
-    }
+            function handleMouseLeave() {
+                isDown = false;
+            }
 
-    function handleTouchEnd() {
-        isDown = false;
-    }
+            function handleTouchEnd() {
+                isDown = false;
+            }
 
-    function handleMouseUp() {
-        isDown = false;
-    }
+            function handleMouseUp() {
+                isDown = false;
+            }
 
-    function handleMouseMove(e) {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - carousel.offsetLeft;
-        const walk = x - startX;
-        carousel.scrollLeft = scrollLeft - walk;
-    }
+            function handleMouseMove(e) {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - carousel.offsetLeft;
+                const walk = x - startX;
+                carousel.scrollLeft = scrollLeft - walk;
+            }
 
-    function handleTouchMove(e) {
-        if (!isDown || e.touches.length > 1) return;
-        e.preventDefault();
-        const touch = e.touches[0];
-        const x = touch.pageX - carousel.offsetLeft;
-        const walk = x - startX;
-        carousel.scrollLeft = scrollLeft - walk;
-    }
-});
+            function handleTouchMove(e) {
+                if (!isDown || e.touches.length > 1) return;
+                e.preventDefault();
+                const touch = e.touches[0];
+                const x = touch.pageX - carousel.offsetLeft;
+                const walk = x - startX;
+                carousel.scrollLeft = scrollLeft - walk;
+            }
+        });
     </script>
 </body>
 </html>
